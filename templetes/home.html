@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Django Home</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h1>This is a home page</h1>
+
     <form action="/contactprocesser" method="post" class="formcss">
         {% csrf_token %}
-        Number 1 : <input type="text" name="txt1" required>
-        Number 2 : <input type="text" name="txt2" required>
-        <input type="submit"/>
+        
+        <div class="form-group">
+            <label for="txt1">Number 1:</label>
+            <input type="text" id="txt1" name="txt1" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="txt2">Number 2:</label>
+            <input type="text" id="txt2" name="txt2" required>
+        </div>
+        
+        <input type="submit" value="Submit"/>
     </form>
 </body>
 </html>

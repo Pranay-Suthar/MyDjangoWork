@@ -1,6 +1,79 @@
-body{
-    background-color: aqua;
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.formcss{
-    border: 2px solid black;
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #6e4c9a, #4c386e);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Form container */
+.formcss {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label + input */
+.formcss label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formcss input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+.formcss input[type="text"]:focus {
+    border-color: #8f5ab1;
+    box-shadow: 0 0 6px rgba(143, 90, 177, 0.4);
+}
+
+/* Submit button */
+.formcss input[type="submit"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #8f5ab1;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formcss input[type="submit"]:hover {
+    background: #6e4c9a;
 }
